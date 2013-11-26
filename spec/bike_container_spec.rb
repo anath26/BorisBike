@@ -12,4 +12,9 @@ describe Bikecontainer do
 		holder.dock(bike)
 		expect(holder.bike_count).to eq(1)
 	end
+
+	it "empty should be true when Bikecontainer is empty" do
+		expect(holder.empty?).to be_true
+	end
+
 end
