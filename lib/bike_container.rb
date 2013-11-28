@@ -31,6 +31,13 @@ module Bikecontainer
 		bikes.delete(bike)
 	end
 
+	def release_all
+		bikes.map do |bike|
+			release(bike)
+	end
+
+	end
+
 	def take_items_from(holder)
 		container = self
 		holder.bikes.each do |bike|
